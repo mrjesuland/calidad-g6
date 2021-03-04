@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +27,11 @@ public class PantallaVictoria extends AppCompatActivity {
     ArrayList<TextView> puntuacionesTop=new ArrayList<>();
     ArrayList<ParPuntuacion> punts=new ArrayList<>();
     JSONObject obj;
+
+    public static final String JSON_SCORE_FILENAME = "jsonPuntos.txt";
+    public static final String JSON_POINTS_KEY = "puntos";
+    public static final String JSON_TOP_SCORES_KEY = "listaPuntuacionesMejores";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +66,7 @@ public class PantallaVictoria extends AppCompatActivity {
         JSONArray theJsonArray=o.getJSONArray("listaPuntuacionesMejores");
         for(int i=0;i<theJsonArray.length();i++){
             JSONObject aux= theJsonArray.getJSONObject(i);
-            punts.add(new ParPuntuacion(aux.getInt("puntos")));
+            punts.add(new ParPuntuacion(aux.getInt(JSON_POINTS_KEY)));
 
         }
         Collections.sort(punts);
@@ -116,43 +120,50 @@ public class PantallaVictoria extends AppCompatActivity {
         JSONObject lis= null;
         try {
             Context context= getApplicationContext();
-            lis = new JSONObject(getJSONLine(context,"jsonPuntos.txt"));
+            lis = new JSONObject(getJSONLine(context,JSON_SCORE_FILENAME));
         } catch (JSONException e) {
             lis = new JSONObject();
         } catch (IOException e) {
             lis = new JSONObject();
         }
 
-        File listFile=new File(getFilesDir(),"jsonPuntos.txt");
+        File listFile=new File(getFilesDir(), JSON_SCORE_FILENAME);
         try {
             FileWriter writer= new FileWriter(listFile);
-            JSONArray arr=lis.getJSONArray("listaPuntuacionesMejores");
+            JSONArray arr=lis.getJSONArray(JSON_TOP_SCORES_KEY);
             JSONObject jo= new JSONObject();
-            jo.put("puntos",puntuacionFinal);
+            jo.put(JSON_POINTS_KEY,puntuacionFinal);
             arr.put(jo);
             writer.write(lis.toString());
             writer.flush();
             writer.close();
         } catch (JSONException | IOException e) {
             try {
-                InsertarPrimero();
-            } catch (JSONException | IOException jsonException) {
+                insertFirst();
+            } catch (JSONException jsonException) {
                 jsonException.printStackTrace();
             }
         }
 
     }
-    public void InsertarPrimero() throws JSONException, IOException {
-        File listFile= new File(getFilesDir(),"jsonPuntos.txt");
-        FileWriter writer= new FileWriter(listFile);
-        JSONObject lis= new JSONObject();
-        JSONArray jArray= new JSONArray();
-        JSONObject jo= new JSONObject();
-        jo.put("puntos",puntuacionFinal);
-        jArray.put(jo);
-        lis.put("listaPuntuacionesMejores",jArray);
-        writer.write(lis.toString());
-        writer.flush();
-        writer.close();
+
+    public void insertFirst() throws JSONException {
+        JSONObject childJsonObject = new JSONObject();
+        childJsonObject.put(JSON_POINTS_KEY, puntuacionFinal);
+
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.put(childJsonObject);
+
+        JSONObject parentJsonObject = new JSONObject();
+        parentJsonObject.put(JSON_TOP_SCORES_KEY, jsonArray);
+
+        File scoresFile = new File(getFilesDir(), JSON_SCORE_FILENAME);
+        try(FileWriter fileWriter = new FileWriter(scoresFile)) {
+            fileWriter.write(parentJsonObject.toString());
+            fileWriter.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }

@@ -18,6 +18,10 @@ public class Game {
         score.resetPoints();
     }
 
+    public Score getScore() {
+        return score;
+    }
+
     public boolean hasGameFinished() {
         return countdown.finishedCount();
     }

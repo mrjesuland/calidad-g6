@@ -7,11 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.application.ScoreboardService;
 import com.example.myapplication.application.ScoreboardServiceImpl;
+import com.example.myapplication.domain.Game;
+import com.example.myapplication.domain.GameFactory;
 import com.example.myapplication.domain.score.Score;
 
 import java.io.File;
 import java.util.List;
-import java.util.Random;
 
 @SuppressWarnings("all")
 public class GameEndedActivity extends AppCompatActivity {
@@ -21,16 +22,22 @@ public class GameEndedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_victoria);
+        setContentView(R.layout.game_ended_screen);
 
         ScoreboardService scoreboardService = new ScoreboardServiceImpl(getStorageFilePath());
-        scoreboardService.addScoreToScoreboard(new Score(new Random().nextInt(5000)));
+
+        Game game = GameFactory.currentGame();
+        Score score = game.getScore();
+        if(score.getPoints() > 0) {
+            scoreboardService.addScoreToScoreboard(score);
+        }
+
         List<Score> topScores = scoreboardService.findByHighestScore(TOP_SCORES_AMOUNT);
 
+        final String SCORE_ID_PREFIX = "score_";
         int traversalIndex = 0;
         while(traversalIndex < topScores.size() - 1) {
-            String elementId = "t" + (traversalIndex + 1);
-            System.out.println(elementId);
+            String elementId = SCORE_ID_PREFIX + (traversalIndex + 1);
             int resourceId = findResourceId(elementId);
             TextView rankingScore = findViewById(resourceId);
             Score currentScore = topScores.get(traversalIndex);

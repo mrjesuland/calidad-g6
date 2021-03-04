@@ -139,7 +139,8 @@ public class PantallaVictoria extends AppCompatActivity {
             writer.close();
         } catch (JSONException | IOException e) {
             try {
-                insertFirst();
+                File scoresFile = new File(getFilesDir(), JSON_SCORE_FILENAME);
+                insertFirst(scoresFile);
             } catch (JSONException jsonException) {
                 jsonException.printStackTrace();
             }
@@ -147,7 +148,7 @@ public class PantallaVictoria extends AppCompatActivity {
 
     }
 
-    public void insertFirst() throws JSONException {
+    public void insertFirst(File scoresFile) throws JSONException {
         JSONObject childJsonObject = new JSONObject();
         childJsonObject.put(JSON_POINTS_KEY, puntuacionFinal);
 
@@ -157,7 +158,6 @@ public class PantallaVictoria extends AppCompatActivity {
         JSONObject parentJsonObject = new JSONObject();
         parentJsonObject.put(JSON_TOP_SCORES_KEY, jsonArray);
 
-        File scoresFile = new File(getFilesDir(), JSON_SCORE_FILENAME);
         try(FileWriter fileWriter = new FileWriter(scoresFile)) {
             fileWriter.write(parentJsonObject.toString());
             fileWriter.flush();

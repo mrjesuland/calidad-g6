@@ -1,4 +1,4 @@
-package com.example.myapplication.domain.score;
+package com.example.myapplication.domain.scoreboard;
 
 public interface ScoreboardRepository {
 

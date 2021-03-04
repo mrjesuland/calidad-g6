@@ -2,17 +2,13 @@ package com.example.myapplication.domain;
 
 public class GameFactory {
 
-    private final Game game;
+    private static final Game game = new Game();
 
-    public GameFactory() {
-        this.game = new Game();
-    }
-
-    public Game getCurrentGame() {
+    public static Game currentGame() {
         return game;
     }
 
-    public Game resetGame() {
+    public static Game resetGame() {
         game.resetGame();
         return game;
     }

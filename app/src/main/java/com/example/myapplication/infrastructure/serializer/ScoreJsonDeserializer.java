@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 public class ScoreJsonDeserializer implements JsonDeserializer<Score> {
 
-    private static final String JSON_POINTS_KEY = "id";
+    private static final String JSON_POINTS_KEY = "points";
 
     public Score deserialize(JSONObject object) {
         try {

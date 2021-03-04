@@ -3,7 +3,7 @@ package com.example.myapplication.infrastructure.serializer;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 
-import com.example.myapplication.domain.score.Scoreboard;
+import com.example.myapplication.domain.scoreboard.Scoreboard;
 import com.example.myapplication.infrastructure.json.JsonSerializer;
 
 import org.json.JSONArray;

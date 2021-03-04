@@ -1,8 +1,10 @@
-package com.example.myapplication.domain.score;
+package com.example.myapplication.domain.scoreboard;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+
+import com.example.myapplication.domain.score.Score;
 
 import java.util.ArrayList;
 import java.util.Collection;

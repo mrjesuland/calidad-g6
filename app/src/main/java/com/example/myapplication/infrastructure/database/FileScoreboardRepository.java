@@ -3,8 +3,8 @@ package com.example.myapplication.infrastructure.database;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 
-import com.example.myapplication.domain.score.Scoreboard;
-import com.example.myapplication.domain.score.ScoreboardRepository;
+import com.example.myapplication.domain.scoreboard.Scoreboard;
+import com.example.myapplication.domain.scoreboard.ScoreboardRepository;
 import com.example.myapplication.infrastructure.json.JsonDeserializer;
 import com.example.myapplication.infrastructure.json.JsonSerializer;
 import com.example.myapplication.infrastructure.serializer.ScoreboardJsonDeserializer;

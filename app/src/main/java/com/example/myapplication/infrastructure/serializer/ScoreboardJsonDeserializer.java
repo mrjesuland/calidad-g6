@@ -5,7 +5,7 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import com.example.myapplication.domain.score.Score;
-import com.example.myapplication.domain.score.Scoreboard;
+import com.example.myapplication.domain.scoreboard.Scoreboard;
 import com.example.myapplication.infrastructure.json.JsonDeserializer;
 
 import org.json.JSONArray;

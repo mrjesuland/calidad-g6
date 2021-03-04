@@ -9,7 +9,9 @@ public class ScoreJsonSerializer implements JsonSerializer<Score> {
 
     public JSONObject serialize(Score score) {
         try {
-            return new JSONObject(Integer.toString(score.getPoints()));
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("points", score.getPoints());
+            return jsonObject;
         } catch(Exception e) {
             throw new RuntimeException(e);
         }

@@ -163,7 +163,7 @@ public class MainJuego extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Intent i=new Intent(MainJuego.this,PantallaVictoria.class);
+                Intent i=new Intent(MainJuego.this, GameEndedActivity.class);
                 startActivity(i);
 
             }

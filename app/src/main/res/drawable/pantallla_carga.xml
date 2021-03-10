@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/black"/> <!--COLOR DE FONDO-->
+    android:
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/inicio_logo_equipo"/>  <!--POSICIÓN DE LA IMAGEN E IMAGEN A USAR-->
+    </item>
+</layer-list>

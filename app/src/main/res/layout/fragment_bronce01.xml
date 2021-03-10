@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFEAFB"
+    tools:context=".Bronce01">
+
+
+    <!-- Implementación del título del desafío-->
+
+    <ImageView
+        android:id="@+id/titulo_desafiobronce01"
+        android:layout_width="738dp"
+        android:layout_height="77dp"
+        android:background="#2679af"
+        android:contentDescription="@string/desafio_bronce_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/desafio_primera_historia_titulo"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/flecha_volver_atras" />
+
+    <ScrollView
+        android:id="@+id/scrollview_escenarios"
+        android:layout_width="731dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/texto_bronce_01"
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text='Bienvenido al desafío más básico del juego. Seguramente que ya lo hayas completado sin saberlo. Consiste en jugar tu primera partida de CoronaStop. Si por algún casual aún no has jugado ninguna partida... ¡¡¡Estás tardando mucho en hacerlo!!! Pulsa en la opción jugar en el menú principal y selecciona el primer escenario "Supermercado".
+                ¿Podrás llegar hasta el final?'
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/btnHistoriaSupermercado"
+                android:layout_width="match_parent"
+                android:layout_height="231dp"
+                android:contentDescription="@string/boton_supermercado"
+                app:srcCompat="@drawable/menu_boton_supermercado" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="356dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/inicio_logo_equipo" />
+
+    <ImageView
+        android:id="@+id/copabronce"
+        android:layout_width="83dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/desafio_copa_bronce" />
+</androidx.constraintlayout.widget.ConstraintLayout>

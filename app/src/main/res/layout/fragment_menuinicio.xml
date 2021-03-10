@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_coronavirus"
+    android:orientation="horizontal"
+    tools:context=".MenuInicio">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="451dp"
+        android:layout_height="104dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087"
+        app:srcCompat="@drawable/inicio_logo_coronastop" />
+
+    <ImageButton
+        android:id="@+id/btnajustes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/botonajustes"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955"
+        app:srcCompat="@drawable/inicio_boton_ajustes" />
+
+    <ImageButton
+        android:id="@+id/btndesafios"
+        android:layout_width="488dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/botondesafios"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842"
+        app:srcCompat="@drawable/inicio_debotondesafios" />
+
+    <ImageButton
+        android:id="@+id/btncomojugar"
+        android:layout_width="488dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/botoncomosejuega"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626"
+        app:srcCompat="@drawable/como_jugar" />
+
+    <ImageButton
+        android:id="@+id/btnjugar"
+        android:layout_width="488dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/botonjugar"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426"
+        app:srcCompat="@drawable/inicio_boton_jugar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

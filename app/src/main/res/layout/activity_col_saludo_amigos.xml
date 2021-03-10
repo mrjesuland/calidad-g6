@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Aquí aplicamos el fondo de pantalla de este activity, lo colocamos en orientación
+ horizontal y relacionamos este XML con la clase COL_SaludoAmigos-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/saludos"
+    android:orientation="horizontal"
+    tools:context=".COL_SaludoAmigos">
+
+    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
+         personalizamos su aspecto-->
+
+    <TextView
+        android:id="@+id/textoSaludo"
+        android:layout_width="496dp"
+        android:layout_height="74dp"
+        android:background="#FFFFFF"
+        android:text="@string/textoSaludo"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <!-- Implementamos el botón 'botonMano', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método ConLaMano de la clase COL_SaludoAmigos-->
+
+    <Button
+        android:id="@+id/botonMano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ConLaMano"
+        android:text="@string/botonMano"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+    <!-- Implementamos el botón 'botonCodo', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método ConElCodo de la clase COL_SaludoAmigos-->
+
+    <Button
+        android:id="@+id/botonCodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ConElCodo"
+        android:text="@string/botonCodo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase COL_SaludoAmigos-->
+
+    <ProgressBar
+        android:id="@+id/barra1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="398dp"
+        android:layout_height="33dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/customprogressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

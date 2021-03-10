@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Aquí aplicamos el fondo_coronavirus de pantalla de este activity, lo colocamos en orientación
+ horizontal y relacionamos este XML con la clase DentroDeLaCalle-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/juego_mascarilla_interrogacion"
+    android:orientation="horizontal"
+    tools:context=".SUP_DentroDeLaCalle">
+
+    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
+    personalizamos su aspecto-->
+
+    <!-- Implementamos el botón 'Me la quito, necesito respirar', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método MeLaQuito de la clase DentroDeLaCalle-->
+
+    <TextView
+        android:id="@+id/TextoQueHacerConMascarilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="@string/texto_que_hacer_con_mascarilla"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/botonMeLaQuito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="MeLaQuito"
+        android:text="@string/boton_me_la_quito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <!-- Implementamos el botón 'No me la quito', donde relacionamos esta parte del diseño
+    con la parte lógica que se encontrará en el método NoMeLaQuito de la clase DentroDeLaCalle-->
+
+    <Button
+        android:id="@+id/botonNoMeLaQuito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="NoMeLaQuito"
+        android:text="@string/boton_no_me_la_quito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <ProgressBar
+        android:id="@+id/barra1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="398dp"
+        android:layout_height="33dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/customprogressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

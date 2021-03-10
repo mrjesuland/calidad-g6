@@ -1,3 +1,181 @@
 <resources>
-    <string name="app_name">Encuentra al negacionista</string>
+    <string name="app_name">CoronaStop</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_jugar">Jugar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_como_jugar">ComoJugar</string>
+
+    <!-- Activity_col_entrada_instituto -->
+    <string name="textoEntradaInstituto">¿TE ECHAS GEL AL ENTRAR AL INSTITUTO?</string>
+    <string name="botonGelSi">POR SUPUESTO</string>
+    <string name="botonGelNo">ESTA VEZ NO</string>
+
+    <!-- Activity_col_pasillos -->
+    <string name="textoPasillos">¿A QUE CLASE VAS?</string>
+    <string name="botonClaseCorrecta">A LA QUE ME CORRESPONDE</string>
+    <string name="botonClasePanas">A LA DE MIS AMIGOS</string>
+
+    <!-- Activity_col_saludo_amigos -->
+    <string name="textoSaludo">TE ENCUENTRAS CON TUS AMIGOS, ¿CÓMO LES SALUDAS?</string>
+    <string name="botonCodo">CON EL CODO</string>
+    <string name="botonMano">CON LA MANO</string>
+
+    <!-- Activity_col_mesa_clase -->
+    <string name="textoDesinfectar">ANTES DE SENTARTE, ¿DESINFECTAS TU MESA Y TU SILLA?</string>
+    <string name="botonDesinfectar">SI LA DESINFECTO</string>
+    <string name="botonNoDesinfectar">NO HACE FALTA</string>
+
+    <!-- Activity_col_pasar_lista -->
+    <string name="textoPasarLista">LA PROFESORA PASA LISTA Y TU NOMBRE NO ESTÁ AHí, POR LO QUE TIENES QUE VOLVER A LA TUYA</string>
+    <string name="boton_continuarClaseBuena">VALE</string>
+
+    <!-- Activity_col_clasebuena -->
+    <string name="texto_ventana_abierta_cerrada">¿ABRO LA VENTANA PARA VENTILAR LA CLASE?</string>
+    <string name="boton_si_es_necesario">SÍ, ES NECESARIO</string>
+    <string name="boton_tengo_frio">NO, PORQUE TENGO FRÍO</string>
+
+
+    <!-- Activity_col_recreo -->
+    <string name="texto_invita_bocadillo">TU AMIGO TE INVITA A TU BOCADILLO, ¿QUÉ HACES?</string>
+    <string name="boton_tengo_hambre">ACEPTO, TENGO MUCHA HAMBRE</string>
+    <string name="boton_no_gracias">NO LO COJO, NO ME APETECE</string>
+
+    <!-- Activity_col_educacion_fisica -->
+    <string name="texto_correr_con_mascarilla">ESTÁS CORRIENDO POR EL PATIO CON LA MASCARILLA PUESTA, ¿QUÉ DECIDES?</string>
+    <string name="boton_necesito_respirar">QUITÁRMELA, NECESITO RESPIRAR</string>
+    <string name="boton_aguanto_bien_asi">LA MANTENGO PUESTA, AGUANTO BIEN ASÍ</string>
+
+    <!-- Activity_col_salida_metro_o_andando -->
+    <string name="texto_volver_a_casa">¿CÓMO VUELVES A CASA?</string>
+    <string name="boton_en_metro">EN METRO, ASÍ LLEGO MÁS RÁPIDO</string>
+    <string name="boton_ir_andando">PREFIERO IR ANDANDO</string>
+
+    <!-- Activity_col_en_el_metro -->
+    <string name="texto_metro_lleno">EL METRO ESTÁ LLENO, ¿QUÉ PIENSAS HACER?</string>
+    <string name="boton_hay_prisa">ME METO, TENGO MUCHA PRISA</string>
+    <string name="boton_esperar_al_siguiente">SERÁ MEJOR ESPERAR AL SIGUIENTE</string>
+
+    <!-- Activity_menu_escenarios -->
+    <string name="flechaatras_escenarios">FLECHA_ATRAS_ESCENARIOS</string>
+    <string name="titulo_escenarios">ESCENARIOS</string>
+    <string name="boton_supermercado">SUPERMERCADO</string>
+    <string name="boton_instituto">INSTITUTO</string>
+    <string name="espaciador">espaciador</string>
+
+    <!-- Activity_entrada_casa -->
+    <string name="texto_que_voy_a_coger">¿QUÉ VAS A COGER ANTES DE SALIR DE CASA?</string>
+    <string name="boton_coger_mascarilla_y_gel">Coger mascarilla y gel</string>
+    <string name="boton_no_coger_nada">No coger nada</string>
+
+    <!-- Activity_elegir_camino -->
+    <string name="texto_como_ir_super">¿CÓMO QUIERES IR AL SUPERMERCADO?</string>
+    <string name="boton_andando">IR ANDANDO</string>
+    <string name="boton_autobus">IR EN AUTOBÚS</string>
+
+    <!-- Activity_autobus_interior -->
+    <string name="texto_donde_sentarse">¿DÓNDE TE SIENTAS?</string>
+    <string name="boton_esperar">ESPERAR Y ENTRAR LUEGO</string>
+    <string name="boton_entrar">ENTRAR CON TODO EL MUNDO</string>
+
+    <!-- Activity_ir_andando -->
+    <string name="texto_que_camino_escoges">¿QUÉ CAMINO ESCOGES?</string>
+    <string name="boton_calle_vacia">Calle vacía, pero tardo más</string>
+    <string name="boton_calle_llena">Calle con gente</string>
+
+    <!-- Activity_dentro_de_la_calle -->
+    <string name="texto_que_hacer_con_mascarilla">¿QUÉ HACES CON LA MASCARILLA?</string>
+    <string name="boton_me_la_quito">Me la quito, necesito respirar</string>
+    <string name="boton_no_me_la_quito">No me la quito</string>
+
+    <!-- Activity_superfuera -->
+    <string name="texto_como_entrar">LLEGAS AL SUPER Y HAY MUCHA GENTE, ¿QUÉ HACES?</string>
+    <string name="boton_senora">AL LADO DE LA SEÑORA</string>
+    <string name="boton_solo">SÓLO ATRÁS</string>
+
+    <!-- Activity_superdentro -->
+    <string name="texto_al_entrar_super">ANTES DE EMPEZAR LA COMPRA ¿QUÉ HACES?</string>
+    <string name="boton_gelyguantes">TE ECHAS GEL Y TE PONES GUANTES</string>
+    <string name="boton_nada">NADA</string>
+
+    <!-- Activity_colaparapagar -->
+    <string name="texto_cola_para_pagar">¿CÓMO VAS A PAGAR?</string>
+    <string name="boton_tarjeta">CON TARJETA</string>
+    <string name="boton_efectivo">EN EFECTIVO</string>
+
+    <!-- Activity_pantallafinal -->
+    <string name="texto_final_historia">¡CAMINO ACABADO!</string>
+    <string name="boton_volver_menu">MENÚ</string>
+    <string name="boton_volver_a_jugar">VOLVER A JUGAR</string>
+    <string name="mensajeFinal">MENSAJEALEATORIO</string>
+    <string name="porciento">PORCENTAJEFINAL</string>
+
+    <!-- Activity juego_autobus_fuera vuelta -->
+    <string name="boton_camino_vuelta">SIGUIENTE</string>
+    <string name="imagenCaminoVuelta">IMAGEN ALICIA CAMINO VUELTA</string>
+
+    <!-- Activity_ajustes -->
+    <string name="switch_silenciar">SILENCIAR</string>
+    <string name="titulo_ajustes">AJUSTES</string>
+    <string name="boton_atras">BOTON ATRAS</string>
+
+    <!-- Fragment_ComoJugar_1 -->
+    <string name="imagen_comojugar12">IMAGENCOMOJUGAR12</string>
+    <string name="imagen_comojugar1">IMAGENCOMOJUGAR1</string>
+    <string name="imagen_comojugar13">IMAGENCOMOJUGAR13</string>
+    <string name="boton_comosejuega1">COMOSEJUEGA1</string>
+
+    <!-- Fragment_ComoJugar_2 -->
+    <string name="imagen_comojugar21">IMAGENCOMOJUGAR21</string>
+    <string name="imagen_comojugar22">IMAGENCOMOJUGAR22</string>
+    <string name="imagen_comojugar23">IMAGENCOMOJUGAR23</string>
+    <string name="boton_comosejuega2">COMOSEJUEGA2</string>
+
+    <!-- Fragment_ComoJugar_3 -->
+    <string name="imagen_comojugar31">IMAGENCOMOJUGAR31</string>
+    <string name="imagen_comojugar32">IMAGENCOMOJUGAR32</string>
+    <string name="imagen_comojugar33">IMAGENCOMOJUGAR33</string>
+    <string name="boton_comosejuega3">COMOSEJUEGA3</string>
+
+    <!-- Fragment_ComoJugar_4 -->
+    <string name="imagen_comojugar41">IMAGENCOMOJUGAR41</string>
+    <string name="boton_comosejuega4">COMOSEJUEGA4</string>
+
+    <!-- Activity_desafios -->
+    <string name="desafio_bronce_01">bronce_01</string>
+    <string name="desafio_bronce_02">bronce_02</string>
+    <string name="desafio_bronce_03">bronce_03</string>
+    <string name="desafio_bronce_04">bronce_04</string>
+    <string name="desafio_plata_01" />
+    <string name="desafio_plata_02">plata_02</string>
+    <string name="desafio_plata_03">plata_03</string>
+    <string name="desafio_plata_04">plata_04</string>
+    <string name="desafio_oro_01" />
+    <string name="desafio_oro_02" />
+    <string name="botonvolver">botonvolver</string>
+
+    <!-- Activity_main -->
+    <string name="botonjugar">jugar</string>
+    <string name="botonlogros">logros</string>
+    <string name="botoncomosejuega">comosejuega</string>
+    <string name="logo">logo</string>
+    <string name="botonajustes">ajustes</string>
+    <string name="desafio_bronce_02_Letra" />
+    <string name="desafio_bronce_03_Letra" />
+    <string name="desafio_plata_01_Letra" />
+    <string name="desafio_plata_02_Letra" />
+    <string name="desafio_plata_03_Letra" />
+    <string name="desafio_plata_04_Letra" />
+    <string name="botondesafios" />
+    <string name="title_activity_historia_supermercado">HistoriaSupermercado</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
 </resources>

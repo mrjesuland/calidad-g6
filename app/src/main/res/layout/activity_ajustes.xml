@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_coronavirus"
+    tools:context=".Ajustes">
+
+    //Las siguientes lineas de codigo corresponden al boton switch
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/boton_Silenciar"
+        android:layout_width="623dp"
+        android:layout_height="78dp"
+        android:text="@string/switch_silenciar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    //Las siguientes lineas corresponden al titulo de la pantalla
+
+    <TextView
+        android:id="@+id/titulo_Ajustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00F8F6F6"
+        android:text="@string/titulo_ajustes"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    //Las siguientes lineas de codigo corresponden al boton de vuelta al menu ppal
+
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/boton_atras"
+        android:onClick="volver"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/flecha_volver_atras" />
+</androidx.constraintlayout.widget.ConstraintLayout>

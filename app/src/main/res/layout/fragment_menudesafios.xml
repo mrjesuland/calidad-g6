@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_coronavirus"
+    tools:context=".MenuDesafios">
+
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/flecha_volver_atras" />
+
+    <ScrollView
+        android:id="@+id/scrollview_escenarios"
+        android:layout_width="731dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Implementación del botón referente al primer desafío bronce-->
+
+            <!-- Separador gráfico entre los diferentes desafíos-->
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce01"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_01"
+                app:srcCompat="@drawable/desafio_primera_historia" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_02"
+                app:srcCompat="@drawable/desafio_conductor_primera" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce03"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_03"
+                app:srcCompat="@drawable/desafio_la_comunidad" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce04"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_bronce_04"
+                app:srcCompat="@drawable/desafio_he_sido_yo" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata01"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_01"
+                app:srcCompat="@drawable/desafio_sindrome_indiana_jones" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_02"
+                app:srcCompat="@drawable/desafio_houston_tenemos_un_problema" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata03"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_03"
+                app:srcCompat="@drawable/desafio_strange" />
+
+            <ImageView
+                android:id="@+id/titulo_desafioplata04"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_plata_04"
+                app:srcCompat="@drawable/desafio_leroy_jenkins" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiooro01"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_oro_01"
+                app:srcCompat="@drawable/desafio_camino_ninja" />
+
+            <ImageView
+                android:id="@+id/titulo_desafiooro02"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:contentDescription="@string/desafio_oro_02"
+                app:srcCompat="@drawable/desafio_alumno_excelente" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

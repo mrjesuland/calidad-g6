@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFEAFB"
+    tools:context=".Bronce02">
+
+
+    <ImageView
+        android:id="@+id/titulo_desafiobronce02_Letra"
+        android:layout_width="738dp"
+        android:layout_height="77dp"
+        android:background="#2679af"
+        android:contentDescription="@string/desafio_bronce_02_Letra"
+        app:srcCompat="@drawable/desafio_conductor_primera_titulo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="0px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/flecha_volver_atras" />
+
+    <!-- Implementación del título del desafío-->
+
+    <ScrollView
+        android:id="@+id/scrollview_escenarios"
+        android:layout_width="731dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/titulo_desafiobronce02"
+                android:layout_width="241dp"
+                android:layout_height="131dp"
+                android:contentDescription="@string/desafio_bronce_02"
+                app:layout_constraintBottom_toTopOf="@+id/bronce_03"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/desafio_conductor_de_primera_foto"
+                tools:ignore="MissingConstraints"
+                tools:layout_conversion_absoluteHeight="88dp"
+                tools:layout_conversion_absoluteWidth="733dp" />
+
+            <TextView
+                android:id="@+id/bronce_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text='Para ser conductor de primera acelera, acelera. Para ser conductor de segunda ten cuidado, con las curvas.
+                              Para ser conductor de tercera ten cuidado con la acera... Bien hecho, has montado en el autobús.'
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnHistoriaSupermercado"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.822"
+                tools:layout_conversion_absoluteHeight="236dp"
+                tools:layout_conversion_absoluteWidth="631dp" />
+
+            <ImageView
+                android:id="@+id/btnHistoriaSupermercado"
+                android:layout_width="531dp"
+                android:layout_height="118dp"
+                android:contentDescription="@string/boton_autobus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/juego_autobus_dentro"
+                tools:layout_conversion_absoluteHeight="231dp"
+                tools:layout_conversion_absoluteWidth="631dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="352dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/inicio_logo_equipo" />
+
+    <ImageView
+        android:id="@+id/copabronce"
+        android:layout_width="83dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/desafio_copa_bronce" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Aquí aplicamos el fondo_coronavirus de pantalla de este activity, lo colocamos en orientación
+ horizontal y relacionamos este XML con la clase EscenarioCasa-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/juego_entrada_casa"
+    android:orientation="horizontal"
+    tools:context=".SUP_EscenarioCasa">
+
+    <!-- Aquí implementamos el texto donde se hace la pregunta al usuario y
+     personalizamos su aspecto-->
+
+    <TextView
+        android:id="@+id/TextoQueVoyACoger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="@string/texto_que_voy_a_coger"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <!-- Implementamos el botón 'Coger mascarilla y gel', donde relacionamos esta parte del diseño
+     con la parte lógica que se encontrará en el método mascarilla de la clase EscenarioCasa-->
+
+    <Button
+        android:id="@+id/botonCogerMascarillaYGel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mascarilla"
+        android:text="@string/boton_coger_mascarilla_y_gel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <!-- Implementamos el botón 'No coger nada', donde relacionamos esta parte del diseño
+     con la parte lógica que se encontrará en el método noMascarilla de la clase EscenarioCasa-->
+
+    <Button
+        android:id="@+id/botonNoCogerNada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="noMascarilla"
+        android:text="@string/boton_no_coger_nada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <!-- Implementamos la barra de progreso del porcentaje de contagio, donde relacionamos esta
+    parte del diseño con la parte lógica que se encontrará en la clase EscenarioCasa-->
+
+    <ProgressBar
+        android:id="@+id/barra1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="398dp"
+        android:layout_height="33dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/customprogressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

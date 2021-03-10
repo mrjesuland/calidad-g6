@@ -1,16 +1,13 @@
 language: android
 dist: trusty
 jdk: oraclejdk8
-
 before_install:
- – chmod +x gradlew
-- yes | sdkmanager "platforms;android-30"
-
+- "chmod +x gradlew"
+- "yes | sdkmanager "platforms;android-30"
 env:
- global:
- - ANDROID_API=30
- - ANDROID_BUILD_TOOLS=30.0.2
-
+  global:
+  - ANDROID_API=30
+  - ANDROID_BUILD_TOOLS=30.0.2
 android:
   components:
   - tools

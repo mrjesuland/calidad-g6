@@ -1,52 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aplicacionps">
+    package="com.example.myapplication">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".PantallaFinal2"></activity>
-        <activity android:name=".COL_PasarLista" />
-        <activity android:name=".COL_MesaClase" />
-        <activity android:name=".COL_SaludoAmigos" />
-        <activity android:name=".COL_Pasillos" />
-        <activity android:name=".COL_EntradaInstituto" />
-        <activity android:name=".COL_Recreo"/>
-        <activity android:name=".COL_ClaseBuena" />
-        <activity android:name=".COL_EnElMetro" />
-        <activity android:name=".COL_SalidaMetroOAndando" />
-        <activity android:name=".COL_EducacionFisica" />
-        <activity android:name=".SUP_CaminoVuelta" />
-        <activity android:name=".Ajustes" />
-        <activity android:name=".PantallaFinal" />
-        <activity android:name=".SUP_ColaParaPagar" />
-        <activity android:name=".SUP_SuperDentro" />
-        <activity android:name=".SUP_superfuera" />
-        <activity android:name=".SUP_DentroDeLaCalle" />
-        <activity android:name=".SUP_IrAndando" />
-        <activity android:name=".SUP_AutobusInterior" />
-        <activity android:name=".SUP_EscenarioCasa" />
-        <activity android:name=".SUP_ElegirCamino" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape"
-            android:theme="@style/SplashTheme"> <!-- AQUI SE LLAMA AL TEMA DE LA PANTALLA SPLASH -->
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".MySplashScreen">
+
+        </activity>
+        <activity android:name=".PantallaDerrota" />
+        <activity android:name=".GameEndedActivity" />
+        <activity android:name=".MenuPausa" />
+        <activity android:name=".MainJuego" ></activity>
+        <activity android:name=".TutoActivity"/>
+        <activity android:name=".OpcionesAct" />
+        <activity android:name=".MainActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".ServicioMusica" android:enabled="true"></service>
 
-        <service
-            android:name=".AudioService"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name" />
+
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>
